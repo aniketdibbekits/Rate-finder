@@ -6,3 +6,8 @@
   justify-content: center;
   background-color: beige;
 }
+@media screen and (max-width: 600px) {
+    #form {
+        width: 80%; /* Adjust the width for smaller screens */
+    }
+}
