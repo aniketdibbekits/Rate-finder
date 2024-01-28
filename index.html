@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dukan.css">
+    <title>Sachin Kirana Stores</title>
+</head>
+<body>
+
+    <form id="form">
+        <h1> Welcome To Sachin Kirana Stores</h1>
+        <label for="Amount"> Item Amount:</label><br>
+        <input type="number" id="Amount"><br>
+    
+        <label for="CAmount">Customer Amount:</label><br>
+        <input type="number" id="CAmount"><br>
+    
+        <h1 id="result"></h1>
+       
+        <input type="button" onclick="calculate()" id="calculateButton" value="Calculate">
+       
+    </form>
+    
+    <script>
+        function calculate() {
+           
+            var Amount = parseFloat(document.getElementById("Amount").value);
+            var CAmount = parseFloat(document.getElementById("CAmount").value);
+            
+           
+            if (isNaN(Amount) || isNaN(CAmount)) {
+                alert("Please enter valid numeric values for Amount and Customer Amount.");
+                return;
+            }
+
+            var totalGrams = (CAmount/Amount)*1000;
+            document.getElementById("result").innerHTML = "Total Grams: " + totalGrams;
+        }
+    </script>
+</body>
+</html>
